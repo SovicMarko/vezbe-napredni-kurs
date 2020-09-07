@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        main {
+            display: flex;
+            flex-direction: row;
+        }
+
+        form,
+        section {
+            flex: 1;
+        }
+
+        section div {
+            background-color: lightgreen;
+            border-left: 10px solid darkgreen;
+            margin: 10px;
+            padding: 10px;
+            position: relative;
+        }
+
+        section span {
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: darkred;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            text-align: center;
+            line-height: 27px;
+            cursor: pointer;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <form name="obrazac">
+            <h3>Unos korisnika</h3>
+            <p>Unesite ime:</p>
+            <input type="text" name="ime">
+            <p>Unesite prezime:</p>
+            <input type="text" name="prezime">
+            <p>Unesite godiste:</p>
+            <input type="text" name="godiste">
+            <p>Unesite status:</p>
+            <input type="radio" name="status" value="true"> Zaposlen <br>
+            <input type="radio" name="status" value="false"> Nezaposlen <br>
+            <hr>
+            <button type="button" onclick="potvrda()">Potvrdi</button>
+        </form>
+        <section id="korisnici">
+
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

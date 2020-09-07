@@ -49,7 +49,6 @@ function proba(e) {
     console.log(e);
 }
 
-
 var el = document.getElementsByTagName("input")[0];
 console.log(el.type);
 console.log(el.maxLength);
