@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+li {
+    display: inline;
+}
+
+#proizvodi {
+    text-align: center;
+}
+
+.kartica {
+    width: 300px;
+    display: inline-block;
+    margin: 30px;
+    vertical-align: top;
+    border: 1px solid gainsboro;
+    padding: 15px;
+}
+
+.kartica img {
+    width: 100%;
+}
+
+.spoljni-modal {
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    /* view-port height - procentualno prema visini ekrana */
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.unutrasnji-modal {
+    /* border: 1px solid red; */
+    width: 70%;
+ 
+    margin: auto;
+    margin-top: 10vh;
+    background-color: white;
+}
+
+.unutrasnji-modal img {
+    width: 100%;
+}
+
+.unutrasnji-modal div {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+}
+
+#izlaz {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 40px;
+}

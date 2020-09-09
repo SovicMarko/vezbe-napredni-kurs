@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #spoljni {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            /* view-port height - procentualno prema visini ekrana */
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        #unutrasnji {
+            /* border: 1px solid red; */
+            width: 70%;
+            height: 80vh;
+            margin: auto;
+            margin-top: 10vh;
+        }
+
+        #unutrasnji img {
+            width: 100%;
+        }
+
+        #izlaz {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+
+        #polje2 {
+            border: 1px solid green;
+        }
+
+        .darkMod {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="spoljni">
+        <div id="unutrasnji"></div>
+        <div id="izlaz">X</div>
+    </div>
+    <p id="pasus1">Lorem ipsum dolor, <b>sit amet consectetur</b> adipisicing elit. Cumque, quaerat quibusdam quas
+        <i>exercitationem voluptatum</i> ut esse adipisci.</p>
+    <div id="polje1">
+        Lorem ipsum dolor <b>sit amet consectetur</b> adipisicing elit. <i>Facilis sunt</i> voluptatibus.
+    </div>
+    <input type="text" id="unos">
+    <button id="dugme1">Klikni me</button>
+    <img class="slika" width="200px"
+        src="https://post.greatist.com/wp-content/uploads/sites/3/2020/02/325466_1100-1100x628.jpg">
+    <img class="slika" width="200px"
+        src="https://static.scientificamerican.com/sciam/cache/file/4E0744CD-793A-4EF8-B550B54F7F2C4406.jpg" alt="">
+    <hr>
+    <br>
+    <a id="link" href="https://www.google.com">Ovo je link</a>
+    <button id="dugme2">Promeni link</button>
+
+    <div id="polje2">
+        <p>Prvi pasus - inicijalno</p>
+    </div>
+
+    <button id="dugme3">Dark mod</button>
+    <button id="dugme4">Light mod</button>
+    <button id="dugme5">Switch mod</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
