@@ -1,0 +1,65 @@
+/* Remove the navbar's default rounded borders and increase the bottom margin */
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+}
+.navbar-inverse {
+    background-color: rgb(3, 31, 3) !important;
+}
+/* Remove the jumbotron's default bottom margin */
+.jumbotron {
+    margin-bottom: 0;
+}
+.panel {
+    margin-bottom: 50px;
+}
+.panel-heading {
+    font-size: 20px;
+    height: 80px;
+}
+.panel-body {
+   position: relative;
+    height: 350px;
+}
+.panel-body > img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.panel-footer {
+    font-size: 25px;
+}
+.panel-footer .btn {
+    float: right;
+}
+
+.korpa {
+    margin-top: 7.5px;
+}
+
+#sadrzaj-korpe img {
+    width: 80px;
+}
+
+#zbir {
+    float: left;
+    font-size: 20px;
+}
+
+.carousel img {
+    width: 100%;
+    height: 400px !important;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
