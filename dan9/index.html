@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        #proba {
+            transition: all 1s;
+        }
+
+        .stilElementa {
+            color: darkgreen;
+            text-decoration: underline;
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .okvirElementa {
+            border: 10px solid red;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div id="app">
+        <h2> {{ ime }} </h2>
+        <h1> {{ broj }} </h1>
+        <button v-on:click="broj++">Povecaj</button>
+        <h2>{{ godine }}</h2>
+        <h2 v-if="godine >= 18"> Osoba je punoletna </h2>
+        <h2 v-else>Osoba je maloletna</h2>
+        <button v-on:click="godine--">Smanji godine</button>
+        <button v-on:click="godine++">Povecaj godine</button>
+        <hr>
+        <h2> {{ godine + 6 }} </h2>
+        <h3> {{ pozdrav('dan') }} </h3>
+        <h3> {{ pozdrav('jutro') }} </h3>
+        <h2> {{brojac}} </h2>
+        <button v-on:click="smanji">Smanji</button>
+        <button v-on:click="povecaj">Povecaj</button>
+        <hr>
+        <a v-bind:href="link">
+            <h4>Ovo je link</h4>
+        </a>
+        <button v-on:click="promeniLink">Promeni link na YT</button>
+        <h1 v-bind:style=" 'color:' + boja">Ovo je neki naslov</h1>
+        <button v-on:click="boja = '#0000ff'">Plava</button>
+        <hr>
+        <div>{{website}}</div>
+        <div v-html="website"></div>
+        <hr>
+        <h1 v-show="prikazano">Ovo je prikazano</h1>
+        <button v-on:click="prikazano = !prikazano">
+            <span v-if="prikazano">Sakrij</span>
+            <span v-else>Prikazi</span>
+        </button>
+        <hr>
+        <h1 id="proba" v-bind:class="{stilElementa : stilizovano, okvirElementa : okvir}">Ovo je stilizovani naslov</h1>
+        <button v-on:click="stilizovano = !stilizovano">Stilizuj</button>
+        <button v-on:click="okvir = !okvir">Dodaj okvir</button>
+        <hr>
+        <ol>
+            <li v-for="osoba in osobe"> {{osoba}} </li>
+        </ol>
+        Nova osoba: <input type="text" v-model="novaOsoba">
+        <button v-on:click="unosOsobe">Potvrdi</button>
+        <hr>
+        <h1>{{grad}}</h1>
+        <input type="text" v-model="grad">
+        <hr>
+        <h2>{{adresa.ulica}}</h2>
+        <div v-for="(el, key) in adresa">
+            <b>{{key}}</b> : {{el}}
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col col-md-3" v-for="artikal in artikli">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4>{{artikal.name}}</h4>
+                    </div>
+                    <div class="panel-body">
+                        <img class="img-thumbnail img-responsive" v-bind:src="artikal.image">
+                    </div>
+                    <div class="panel-footer">
+                        <h2>{{artikal.price}} din</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <hr>
+    <hr>
+    <hr>
+    <div id="test">
+        <h2 id="ime"> </h2>
+        <h1 id="broj"> </h1>
+        <button id="dugme">Povecaj</button>
+        <h2 id="godineIspis"></h2>
+        <h2 id="godine"></h2>
+        <button id="smanji">Smanji godine</button>
+        <button id="povecaj">Povecaj godine</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
